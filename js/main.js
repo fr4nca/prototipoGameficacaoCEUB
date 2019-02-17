@@ -9,4 +9,5 @@ function toggleNav() {
   texts.forEach(text => {
     text.classList.toggle("hidden");
   });
+  main.classList.toggle("active");
 }

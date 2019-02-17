@@ -103,6 +103,6 @@ main {
   margin-right: 0.5rem;
 }
 
-main {
-  margin-left: 200px;
+main.active {
+  margin-left: 250px;
 }
