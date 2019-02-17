@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-main {
-  margin-top: 34px;
-  margin-left: 10%;
-}
-
 .color-white {
   color: #fff;
 }
@@ -101,6 +96,11 @@ main {
 
 #nav #side-nav #menu .menu-item a i {
   margin-right: 0.5rem;
+}
+
+main {
+  margin-top: 30px;
+  margin-left: 100px;
 }
 
 main.active {
