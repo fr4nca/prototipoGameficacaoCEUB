@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+/* Utilities */
 .color-white {
   color: #fff;
 }
@@ -14,6 +15,62 @@
   color: #333;
 }
 
+.container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.l-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  width: 100%;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+}
+
+.card-header {
+  padding: 1rem;
+  background: #eee;
+}
+
+.card-content {
+  padding: 1rem;
+  width: 100%;
+}
+
+.btn {
+  background: #0572ce;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn:hover {
+  background: #0d60a5;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+select.form-control {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px #ccc solid;
+}
+
+/* Navbar */
 #nav #top-nav {
   display: block;
   width: 100%;
@@ -30,19 +87,19 @@
 }
 
 #nav #top-nav #toggler {
-  margin: 0.5rem;
+  margin: 0 0.6rem;
   padding: 0.5rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.52rem;
   cursor: pointer;
 }
 
 #nav #top-nav #toggler:hover {
   background: #0d60a5;
-  border: 1px solid #044d88;
   border-radius: 2px;
 }
 
 #nav #top-nav #toggler.active {
-  border: 1px solid #044d88;
   border-radius: 2px;
   background: #04569b;
 }
@@ -98,11 +155,28 @@
   margin-right: 0.5rem;
 }
 
-main {
-  margin-top: 30px;
-  margin-left: 100px;
+/* Main */
+main#dashboard {
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "game-select game-select"
+    "ranking chart";
+  grid-gap: 1.5rem;
 }
 
-main.active {
-  margin-left: 250px;
+main#dashboard > #title {
+  grid-area: title;
+}
+
+main#dashboard > #game-select {
+  grid-area: game-select;
+}
+
+main#dashboard > #ranking {
+  grid-area: ranking;
+}
+
+main#dashboard > #chart {
+  grid-area: chart;
 }
