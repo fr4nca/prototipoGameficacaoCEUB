@@ -261,4 +261,7 @@ main#dashboard > #main-content #chart {
       "chart";
     grid-template-columns: 1fr;
   }
+  #myChart {
+    height: 200px;
+  }
 }
