@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
 * {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.3;
   margin: 0;
   padding: 0;
@@ -16,8 +18,8 @@
 }
 
 .container {
-  max-width: 1500px;
-  margin: auto;
+  max-width: 1700px;
+  margin: 0 auto;
   padding: 2rem;
 }
 
@@ -43,7 +45,7 @@
 }
 
 .btn {
-  background: #0572ce;
+  background-color: #0572ce;
   color: #fff;
   text-align: center;
   border-radius: 3px;
@@ -53,7 +55,7 @@
 }
 
 .btn:hover {
-  background: #0d60a5;
+  background-color: #0d60a5;
 }
 
 .form-control {
@@ -70,11 +72,50 @@ select.form-control {
   border: 1px #ccc solid;
 }
 
+.wrapper {
+  line-height: 1.5em;
+  margin: 0 auto;
+  max-width: 2000px;
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+}
+
+th {
+  background-color: #0572ce;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+}
+
+td,
+th {
+  padding: 1em 1.5em;
+  text-align: left;
+}
+
+tbody tr:nth-child(2n-1) {
+  background-color: #f5f5f5;
+  transition: all 0.125s ease-in-out;
+}
+
+tbody tr:hover {
+  background-color: rgba(50, 98, 149, 0.3);
+}
+
+td.rank {
+  text-transform: capitalize;
+}
+
 /* Navbar */
 #nav #top-nav {
   display: block;
   width: 100%;
-  background: #0572ce;
+  background-color: #0572ce;
   height: 3rem;
   display: flex;
   align-items: center;
@@ -95,18 +136,18 @@ select.form-control {
 }
 
 #nav #top-nav #toggler:hover {
-  background: #0d60a5;
+  background-color: #0d60a5;
   border-radius: 2px;
 }
 
 #nav #top-nav #toggler.active {
   border-radius: 2px;
-  background: #04569b;
+  background-color: #04569b;
 }
 
 #nav #side-nav {
   width: 50px;
-  background: #31373c;
+  background-color: #31373c;
   position: fixed;
   top: 3rem;
   bottom: 0;
@@ -135,11 +176,11 @@ select.form-control {
 }
 
 #nav #side-nav #menu .menu-item.active {
-  background: #22262a;
+  background-color: #22262a;
 }
 
 #nav #side-nav #menu .menu-item:hover {
-  background: #282d31;
+  background-color: #282d31;
 }
 
 #nav #side-nav #menu .menu-item a {
@@ -156,27 +197,25 @@ select.form-control {
 }
 
 /* Main */
-main#dashboard {
+main#dashboard #content {
   display: grid;
   grid-template-areas:
-    "title title"
     "game-select game-select"
     "ranking chart";
   grid-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
 }
 
-main#dashboard > #title {
-  grid-area: title;
-}
-
-main#dashboard > #game-select {
+main#dashboard > #content #game-select {
   grid-area: game-select;
 }
 
-main#dashboard > #ranking {
+main#dashboard > #content #ranking {
   grid-area: ranking;
 }
 
-main#dashboard > #chart {
+main#dashboard > #content #chart {
   grid-area: chart;
+  width: 100%;
+  height: 100%;
 }
