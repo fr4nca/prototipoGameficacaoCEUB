@@ -27,6 +27,7 @@
 .l-heading {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 1;
 }
 
 .card {
@@ -214,6 +215,13 @@ main#dashboard {
   width: 100%;
   margin-top: 3rem;
   height: 10000px;
+}
+
+main#dashboard #title i {
+  background: #0572ce;
+  padding: 0.8rem;
+  border-radius: 5px;
+  color: #fff;
 }
 
 main#dashboard #main-content {
