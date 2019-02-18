@@ -45,7 +45,9 @@ const myChart = new Chart(ctx, {
       }
     ]
   },
+  maintainAspectRatio: false,
   options: {
+    maintainAspectRatio: false,
     scales: {
       yAxes: [
         {
@@ -57,3 +59,5 @@ const myChart = new Chart(ctx, {
     }
   }
 });
+
+Chart.defaults.global.responsive = true;

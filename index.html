@@ -14,18 +14,18 @@
     <title>GameficaçãoCEUB | Dashboard</title>
   </head>
   <body>
-    <header id="nav">
-      <nav id="top-nav">
+    <nav id="nav">
+      <div id="nav-content">
         <span id="toggler" onclick="toggleNav()"
           ><i class="fas fa-bars color-white"></i
         ></span>
         <a href="/">
           GamificaçãoCEUB
         </a>
-      </nav>
-    </header>
-    <div id="content">
-      <aside id="side-nav">
+      </div>
+    </nav>
+    <main id="content">
+      <nav id="side-nav">
         <ul id="menu">
           <li class="menu-item active">
             <a href="/"
@@ -52,13 +52,13 @@
             >
           </li>
         </ul>
-      </aside>
-      <main id="dashboard" class="container">
+      </nav>
+      <section id="dashboard">
         <h1 id="title" class="l-heading">
           <i class="fas fa-boxes"></i> Dashboard
         </h1>
-        <section id="main-content">
-          <section id="game-select">
+        <div id="main-content">
+          <div id="game-select">
             <div class="card">
               <div class="card-header">Selecione o game:</div>
               <div class="card-content">
@@ -77,8 +77,8 @@
                 </form>
               </div>
             </div>
-          </section>
-          <section id="ranking">
+          </div>
+          <div id="ranking">
             <div class="card">
               <div class="card-header">Ranking do game:</div>
               <div class="card-content">
@@ -122,18 +122,18 @@
                 </div>
               </div>
             </div>
-          </section>
-          <section id="chart">
+          </div>
+          <div id="chart">
             <div class="card">
               <div class="card-header">Ranking do game:</div>
               <div class="card-content">
-                <canvas id="myChart" height="150px"></canvas>
+                <canvas id="myChart"></canvas>
               </div>
             </div>
-          </section>
-        </section>
-      </main>
-    </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
     <script src="js/main.js"></script>
   </body>

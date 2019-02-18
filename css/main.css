@@ -20,7 +20,6 @@
 .container {
   max-width: 1500px;
   margin: auto;
-  padding: 2rem;
 }
 
 .l-heading {
@@ -74,65 +73,27 @@ select.form-control {
   border: 1px #ccc solid;
 }
 
-.table-wrapper {
-  line-height: 1.5em;
-  margin: 0 auto;
-  max-width: 2000px;
-  overflow: hidden;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  background: #fff;
-}
-
-th {
-  background-color: #0572ce;
-  font-weight: bold;
-  color: #fff;
-  white-space: nowrap;
-}
-
-td,
-th {
-  padding: 1em 1.5em;
-  text-align: left;
-}
-
-tbody tr:nth-child(2n-1) {
-  background-color: #f5f5f5;
-  transition: all 0.125s ease-in-out;
-}
-
-tbody tr:hover {
-  background-color: rgba(50, 98, 149, 0.3);
-}
-
-td.rank {
-  text-transform: capitalize;
-}
-
 /* Navbar */
-#nav #top-nav {
-  position: fixed;
+#nav {
+  position: sticky;
   top: 0;
-  display: block;
-  width: 100%;
   background-color: #0572ce;
-  height: 3rem;
+}
+
+#nav #nav-content {
   display: flex;
+  height: 3rem;
+  width: 100%;
   align-items: center;
-  overflow: hidden;
   color: white;
 }
 
-#nav #top-nav a {
+#nav #nav-content a {
   text-decoration: none;
   color: white;
 }
 
-#nav #top-nav #toggler {
+#nav #nav-content #toggler {
   margin: 0 0.6rem;
   padding: 0.5rem;
   padding-bottom: 0.2rem;
@@ -140,45 +101,44 @@ td.rank {
   cursor: pointer;
 }
 
-#nav #top-nav #toggler:hover {
+#nav #nav-content #toggler:hover {
   background-color: #0d60a5;
   border-radius: 2px;
 }
 
-#nav #top-nav #toggler.active {
+#nav #nav-content #toggler.active {
   border-radius: 2px;
   background-color: #04569b;
 }
 
-#content {
+main#content {
   display: grid;
   grid-template-areas: "side-nav dashboard";
-  grid-template-columns: 50px auto;
+  grid-template-columns: 50px 1fr;
 }
 
-aside#side-nav {
+main#content #side-nav {
   grid-area: side-nav;
   width: 50px;
   background-color: #31373c;
   position: fixed;
-  top: 3rem;
   height: 100%;
   transition: width 200ms ease;
 }
 
-aside#side-nav.active {
+main#content #side-nav.active {
   width: 130px;
 }
 
-aside#side-nav #menu .menu-item-text.hidden {
+main#content #side-nav #menu .menu-item-text.hidden {
   display: none;
 }
 
-aside#side-nav #menu {
+main#content #side-nav #menu {
   list-style: none;
 }
 
-aside#side-nav #menu .menu-item {
+main#content #side-nav #menu .menu-item {
   font-size: 0.9rem;
   width: 100%;
   height: 2.8rem;
@@ -186,15 +146,15 @@ aside#side-nav #menu .menu-item {
   margin: auto;
 }
 
-aside#side-nav #menu .menu-item.active {
+main#content #side-nav #menu .menu-item.active {
   background-color: #22262a;
 }
 
-aside#side-nav #menu .menu-item:hover {
+main#content #side-nav #menu .menu-item:hover {
   background-color: #282d31;
 }
 
-aside#side-nav #menu .menu-item a {
+main#content #side-nav #menu .menu-item a {
   text-decoration: none;
   color: white;
   display: flex;
@@ -203,65 +163,63 @@ aside#side-nav #menu .menu-item a {
   padding: 1rem;
 }
 
-aside#side-nav #menu .menu-item a i {
+main#content #side-nav #menu .menu-item a i {
   margin-right: 0.5rem;
 }
 
 /* Main */
-main#dashboard {
+main#content section#dashboard {
   grid-area: dashboard;
-  width: 100%;
-  margin-top: 3rem;
-  height: 10000px;
+  padding: 1.2rem;
 }
 
-main#dashboard #title i {
+section#dashboard #title i {
   background: #0572ce;
   padding: 0.8rem;
   border-radius: 5px;
   color: #fff;
 }
 
-main#dashboard #main-content {
+section#dashboard #main-content {
   display: grid;
   grid-template-areas:
     "game-select game-select"
     "ranking chart";
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 1rem;
 }
 
-main#dashboard > #main-content #game-select {
+section#dashboard #main-content #game-select {
   grid-area: game-select;
 }
 
-main#dashboard > #main-content #ranking {
+section#dashboard #main-content #ranking {
   grid-area: ranking;
 }
 
-main#dashboard > #main-content #chart {
+section#dashboard #main-content #chart {
   grid-area: chart;
+}
+
+section#dashboard #main-content #chart #myChart {
   width: 100%;
-  height: 100%;
 }
 
 @media (max-width: 768px) {
-  #content {
-    width: 100vw;
-  }
   .l-heading {
     font-size: 2rem;
   }
 
-  .container {
-    padding: 0.8rem;
+  section#dashboard #main-content #chart #myChart {
+    width: 100%;
+    height: 275px !important;
   }
 
-  main#dashboard #main-content {
-    display: grid;
+  section#dashboard #main-content {
     grid-template-areas:
       "game-select"
       "ranking"
       "chart";
+    grid-template-columns: 1fr;
   }
 }
