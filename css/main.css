@@ -50,6 +50,7 @@
   color: #fff;
   text-align: center;
   border-radius: 3px;
+  border: none;
   padding: 0.5rem;
   cursor: pointer;
   font-size: 0.85rem;
@@ -73,7 +74,7 @@ select.form-control {
   border: 1px #ccc solid;
 }
 
-.wrapper {
+.table-wrapper {
   line-height: 1.5em;
   margin: 0 auto;
   max-width: 2000px;
@@ -114,12 +115,15 @@ td.rank {
 
 /* Navbar */
 #nav #top-nav {
+  position: fixed;
+  top: 0;
   display: block;
   width: 100%;
   background-color: #0572ce;
   height: 3rem;
   display: flex;
   align-items: center;
+  overflow: hidden;
   color: white;
 }
 
@@ -146,29 +150,36 @@ td.rank {
   background-color: #04569b;
 }
 
-#nav #side-nav {
+#content {
+  display: grid;
+  grid-template-areas: "side-nav dashboard";
+  grid-template-columns: 50px auto;
+}
+
+aside#side-nav {
+  grid-area: side-nav;
   width: 50px;
   background-color: #31373c;
   position: fixed;
   top: 3rem;
-  bottom: 0;
+  height: 100%;
   overflow: hidden;
   transition: width 200ms ease;
 }
 
-#nav #side-nav.active {
-  width: 180px;
+aside#side-nav.active {
+  width: 130px;
 }
 
-#nav #side-nav #menu .menu-item-text.hidden {
+aside#side-nav #menu .menu-item-text.hidden {
   display: none;
 }
 
-#nav #side-nav #menu {
+aside#side-nav #menu {
   list-style: none;
 }
 
-#nav #side-nav #menu .menu-item {
+aside#side-nav #menu .menu-item {
   font-size: 0.9rem;
   width: 100%;
   height: 2.8rem;
@@ -176,15 +187,15 @@ td.rank {
   margin: auto;
 }
 
-#nav #side-nav #menu .menu-item.active {
+aside#side-nav #menu .menu-item.active {
   background-color: #22262a;
 }
 
-#nav #side-nav #menu .menu-item:hover {
+aside#side-nav #menu .menu-item:hover {
   background-color: #282d31;
 }
 
-#nav #side-nav #menu .menu-item a {
+aside#side-nav #menu .menu-item a {
   text-decoration: none;
   color: white;
   display: flex;
@@ -193,12 +204,19 @@ td.rank {
   padding: 1rem;
 }
 
-#nav #side-nav #menu .menu-item a i {
+aside#side-nav #menu .menu-item a i {
   margin-right: 0.5rem;
 }
 
 /* Main */
-main#dashboard #content {
+main#dashboard {
+  grid-area: dashboard;
+  width: 100%;
+  margin-top: 3rem;
+  height: 10000px;
+}
+
+main#dashboard #main-content {
   display: grid;
   grid-template-areas:
     "game-select game-select"
@@ -207,16 +225,32 @@ main#dashboard #content {
   grid-template-columns: 1fr 1fr;
 }
 
-main#dashboard > #content #game-select {
+main#dashboard > #main-content #game-select {
   grid-area: game-select;
 }
 
-main#dashboard > #content #ranking {
+main#dashboard > #main-content #ranking {
   grid-area: ranking;
 }
 
-main#dashboard > #content #chart {
+main#dashboard > #main-content #chart {
   grid-area: chart;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+    padding: 0.8rem;
+  }
+
+  main#dashboard #main-content {
+    display: grid;
+    grid-template-areas:
+      "game-select"
+      "ranking"
+      "chart";
+    grid-template-columns: 1fr;
+  }
 }

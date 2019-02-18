@@ -23,7 +23,9 @@
           GamificaçãoCEUB
         </a>
       </nav>
-      <nav id="side-nav">
+    </header>
+    <div id="content">
+      <aside id="side-nav">
         <ul id="menu">
           <li class="menu-item active">
             <a href="/"
@@ -50,89 +52,88 @@
             >
           </li>
         </ul>
-      </nav>
-    </header>
-
-    <main id="dashboard" class="container">
-      <h1 id="title" class="l-heading">
-        <i class="fas fa-chart-bar "></i> Dashboard
-      </h1>
-      <section id="content">
-        <section id="game-select">
-          <div class="card">
-            <div class="card-header">Selecione o game:</div>
-            <div class="card-content">
-              <form class="form-group">
-                <select
-                  class="form-control"
-                  name="game-select"
-                  id="game-select"
-                >
-                  <option value="">Selecione o game</option>
-                  <option value="game1">Game1</option>
-                  <option value="game2">Game2</option>
-                  <option value="game3">Game3</option>
-                </select>
-                <a class="btn">Consultar</a>
-              </form>
-            </div>
-          </div>
-        </section>
-        <section id="ranking">
-          <div class="card">
-            <div class="card-header">Ranking do game:</div>
-            <div class="card-content">
-              <div class="wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Rank</th>
-                      <th>Jogador</th>
-                      <th>Pontos</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="rank">1</td>
-                      <td class="jogador">Thaymãe</td>
-                      <td class="points">1460</td>
-                    </tr>
-                    <tr>
-                      <td class="rank">2</td>
-                      <td class="jogador">Ronan</td>
-                      <td class="points">1340</td>
-                    </tr>
-                    <tr>
-                      <td class="rank">3</td>
-                      <td class="jogador">Victor França</td>
-                      <td class="points">1245</td>
-                    </tr>
-                    <tr>
-                      <td class="rank">4</td>
-                      <td class="jogador">João Paulo</td>
-                      <td class="points">1210</td>
-                    </tr>
-                    <tr>
-                      <td class="rank">5</td>
-                      <td class="jogador">Lucas Freitas</td>
-                      <td class="points">1186</td>
-                    </tr>
-                  </tbody>
-                </table>
+      </aside>
+      <main id="dashboard" class="container">
+        <h1 id="title" class="l-heading">
+          <i class="fas fa-boxes"></i> Dashboard
+        </h1>
+        <section id="main-content">
+          <section id="game-select">
+            <div class="card">
+              <div class="card-header">Selecione o game:</div>
+              <div class="card-content">
+                <form class="form-group">
+                  <select
+                    class="form-control"
+                    name="game-select"
+                    id="game-select"
+                  >
+                    <option value="">Selecione o game</option>
+                    <option value="game1">Game1</option>
+                    <option value="game2">Game2</option>
+                    <option value="game3">Game3</option>
+                  </select>
+                  <button type="submit" class="btn">Consultar</button>
+                </form>
               </div>
             </div>
-          </div>
-        </section>
-        <section id="chart">
-          <div class="card">
-            <div class="card-header">Ranking do game:</div>
-            <div class="card-content">
-              <canvas id="myChart"></canvas>
+          </section>
+          <section id="ranking">
+            <div class="card">
+              <div class="card-header">Ranking do game:</div>
+              <div class="card-content">
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Rank</th>
+                        <th>Jogador</th>
+                        <th>Pontos</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rank">1</td>
+                        <td class="jogador">Thaymãe</td>
+                        <td class="points">1460</td>
+                      </tr>
+                      <tr>
+                        <td class="rank">2</td>
+                        <td class="jogador">Ronan</td>
+                        <td class="points">1340</td>
+                      </tr>
+                      <tr>
+                        <td class="rank">3</td>
+                        <td class="jogador">Victor França</td>
+                        <td class="points">1245</td>
+                      </tr>
+                      <tr>
+                        <td class="rank">4</td>
+                        <td class="jogador">João Paulo</td>
+                        <td class="points">1210</td>
+                      </tr>
+                      <tr>
+                        <td class="rank">5</td>
+                        <td class="jogador">Lucas Freitas</td>
+                        <td class="points">1186</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-          </div>
+          </section>
+          <section id="chart">
+            <div class="card">
+              <div class="card-header">Ranking do game:</div>
+              <div class="card-content">
+                <canvas id="myChart" height="250px"></canvas>
+              </div>
+            </div>
+          </section>
         </section>
-      </section>
-    </main>
+      </main>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
     <script src="js/main.js"></script>
   </body>
