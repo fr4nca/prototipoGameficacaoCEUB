@@ -18,9 +18,10 @@
 }
 
 .container {
-  max-width: 1700px;
-  margin: 0 auto;
+  max-width: 1500px;
+  margin: auto;
   padding: 2rem;
+  transition: all 2s ease;
 }
 
 .l-heading {
@@ -156,7 +157,7 @@ td.rank {
 }
 
 #nav #side-nav.active {
-  width: 200px;
+  width: 180px;
 }
 
 #nav #side-nav #menu .menu-item-text.hidden {
