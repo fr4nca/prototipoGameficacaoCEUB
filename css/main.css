@@ -73,6 +73,31 @@ select.form-control {
   border: 1px #ccc solid;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: #0572ce;
+  color: #fff;
+}
+
+td,
+th {
+  padding: 0.8rem;
+  text-align: left;
+}
+
+tbody tr:nth-child(2n-1) {
+  background-color: #f5f5f5;
+  transition: all 0.125s ease-in-out;
+}
+
+tbody tr:hover {
+  background-color: rgba(13, 96, 165, 0.6);
+}
+
 /* Navbar */
 #nav {
   position: sticky;
