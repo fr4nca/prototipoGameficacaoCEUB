@@ -14,18 +14,20 @@
     <title>GameficaçãoCEUB | Dashboard</title>
   </head>
   <body>
-    <header id="nav">
-      <nav id="top-nav">
+    <nav id="nav">
+      <div id="nav-content">
         <span id="toggler" onclick="toggleNav()"
           ><i class="fas fa-bars color-white"></i
         ></span>
         <a href="/">
           GamificaçãoCEUB
         </a>
-      </nav>
+      </div>
+    </nav>
+    <main id="content">
       <nav id="side-nav">
         <ul id="menu">
-          <li class="menu-item">
+          <li class="menu-item ">
             <a href="/"
               ><i class="fas fa-boxes"></i
               ><span class="menu-item-text hidden">Dashboard</span></a
@@ -51,17 +53,178 @@
           </li>
         </ul>
       </nav>
-    </header>
+      <section id="dashboard">
+        <div class="heading-wrapper">
+          <h1 id="title" class="l-heading">
+            <i class="fas fa-rocket"></i> Tarefas
+          </h1>
+          <a id="createTarefa" onclick="toggleTarefa()" class="btn"
+            >Criar tarefa</a
+          >
+        </div>
+        <div id="tarefa-content">
+          <div id="tarefa-form">
+            <div class="card">
+              <div class="card-header">Criar tarefa</div>
+              <div class="card-content">
+                <form>
+                  <div class="form-group">
+                    <label for="game-select">Game:</label>
+                    <select
+                      class="form-control"
+                      name="game-select"
+                      id="game-select"
+                    >
+                      <option value="">Selecione o game</option>
+                      <option value="game1">Game1</option>
+                      <option value="game2">Game2</option>
+                      <option value="game3">Game3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="classificacao">Classificação:</label>
+                    <input
+                      type="text"
+                      name="classificacao"
+                      id="classificacao"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="resumo">Resumo:</label>
+                    <input
+                      type="text"
+                      name="resumo"
+                      id="resumo"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="responsavel">Responsável:</label>
+                    <input
+                      type="text"
+                      name="responsavel"
+                      id="responsavel"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="dta_resolucao">Data de resolução:</label>
+                    <input
+                      type="date"
+                      name="dta_resolucao"
+                      id="dta_resolucao"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="tag">Tag:</label>
+                    <input
+                      type="text"
+                      name="tag"
+                      id="tag"
+                      class="form-control"
+                    />
+                  </div>
 
-    <main>
-      <h1>Welcome</h1>
-
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint enim
-        molestias ad fugit, porro aperiam alias quae blanditiis in saepe ipsum
-        quod expedita impedit iste esse dolore qui possimus dolorum tempore
-        commodi ex necessitatibus, quis dolorem eum. Neque, consequuntur id.
-      </p>
+                  <a class="btn">Criar</a>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div id="tarefas">
+            <div class="card">
+              <div class="card-header">Games</div>
+              <div class="card-content">
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Game</th>
+                        <th>Classificação</th>
+                        <th>Resumo</th>
+                        <th>Responsável</th>
+                        <th>Status</th>
+                        <th>Data de resolução</th>
+                        <th>Tag</th>
+                        <th>Pontuação</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="id">1</td>
+                        <td class="game">Turma A</td>
+                        <td class="classificacao">Nova funcionalidade</td>
+                        <td class="resumo">
+                          Adição de funcionalidade de login
+                        </td>
+                        <td class="responsavel">Thaynara</td>
+                        <td class="status">Ativo</td>
+                        <td class="dta_resolucao">26/02/2019</td>
+                        <td class="dta_resolucao">alta_complexidade</td>
+                        <td class="pontuacao">16</td>
+                      </tr>
+                      <tr>
+                        <td class="id">2</td>
+                        <td class="game">Turma A</td>
+                        <td class="classificacao">Nova funcionalidade</td>
+                        <td class="resumo">
+                          Adição de funcionalidade de login
+                        </td>
+                        <td class="responsavel">Lucas Freitas</td>
+                        <td class="status">Ativo</td>
+                        <td class="dta_resolucao">26/02/2019</td>
+                        <td class="dta_resolucao">alta_complexidade</td>
+                        <td class="pontuacao">16</td>
+                      </tr>
+                      <tr>
+                        <td class="id">3</td>
+                        <td class="game">Turma A</td>
+                        <td class="classificacao">Nova funcionalidade</td>
+                        <td class="resumo">
+                          Adição de funcionalidade de login
+                        </td>
+                        <td class="responsavel">João Paulo</td>
+                        <td class="status">Ativo</td>
+                        <td class="dta_resolucao">26/02/2019</td>
+                        <td class="dta_resolucao">alta_complexidade</td>
+                        <td class="pontuacao">16</td>
+                      </tr>
+                      <tr>
+                        <td class="id">4</td>
+                        <td class="game">Turma A</td>
+                        <td class="classificacao">Nova funcionalidade</td>
+                        <td class="resumo">
+                          Adição de funcionalidade de login
+                        </td>
+                        <td class="responsavel">Ronan</td>
+                        <td class="status">Ativo</td>
+                        <td class="dta_resolucao">26/02/2019</td>
+                        <td class="dta_resolucao">alta_complexidade</td>
+                        <td class="pontuacao">16</td>
+                      </tr>
+                      <tr>
+                        <td class="id">5</td>
+                        <td class="game">Turma A</td>
+                        <td class="classificacao">Nova funcionalidade</td>
+                        <td class="resumo">
+                          Adição de funcionalidade de login
+                        </td>
+                        <td class="responsavel">Victor França</td>
+                        <td class="status">Ativo</td>
+                        <td class="dta_resolucao">26/02/2019</td>
+                        <td class="dta_resolucao">alta_complexidade</td>
+                        <td class="pontuacao">16</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="js/main.js"></script>
   </body>

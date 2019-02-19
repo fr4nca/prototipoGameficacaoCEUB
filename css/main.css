@@ -78,6 +78,12 @@ a.btn {
   padding: 0.4rem;
 }
 
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 select.form-control {
   padding: 0.5rem;
   font-size: 1rem;
@@ -252,12 +258,6 @@ section#dashboard #game-content {
   grid-gap: 1rem;
 }
 
-section#dashboard .heading-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 section#dashboard #game-content #games {
   grid-area: gametable;
 }
@@ -272,9 +272,66 @@ section#dashboard #game-content #createGame-form.active {
   display: block;
 }
 
+section#dashboard #desafio-content {
+  display: grid;
+  grid-template-areas:
+    "desafioform"
+    "desafiogameselect"
+    "desafiostable";
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+section#dashboard #desafio-content #desafio-game-select {
+  grid-area: desafiogameselect;
+}
+
+section#dashboard #desafio-content #desafios {
+  grid-area: desafiostable;
+}
+
+section#dashboard #desafio-content #desafio-form {
+  grid-area: desafioform;
+  display: none;
+}
+
+section#dashboard #desafio-content #desafio-form.active {
+  grid-area: desafioform;
+  display: block;
+}
+
+section#dashboard #tarefa-content {
+  display: grid;
+  grid-template-areas:
+    "tarefaform"
+    "tarefastable";
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+section#dashboard #tarefa-content #tarefas {
+  grid-area: tarefastable;
+}
+
+section#dashboard #tarefa-content #tarefa-form {
+  grid-area: tarefaform;
+  display: none;
+}
+
+section#dashboard #tarefa-content #tarefa-form.active {
+  grid-area: tarefaform;
+  display: block;
+}
+
 @media (max-width: 768px) {
   .l-heading {
     font-size: 2rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   section#dashboard #main-content #chart #myChart {

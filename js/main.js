@@ -2,6 +2,8 @@ const sideNav = document.querySelector("#side-nav");
 const toggler = document.querySelector("#toggler");
 const texts = document.querySelectorAll(".menu-item-text");
 const createGame = document.querySelector("#createGame-form");
+const createDesafio = document.querySelector("#desafio-form");
+const createTarefa = document.querySelector("#tarefa-form");
 
 function toggleNav() {
   sideNav.classList.toggle("active");
@@ -13,6 +15,14 @@ function toggleNav() {
 
 function toggleGame() {
   createGame.classList.toggle("active");
+}
+
+function toggleDesafio() {
+  createDesafio.classList.toggle("active");
+}
+
+function toggleTarefa() {
+  createTarefa.classList.toggle("active");
 }
 
 const ctx = document.querySelector("#myChart").getContext("2d");
