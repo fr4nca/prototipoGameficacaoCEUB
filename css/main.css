@@ -310,12 +310,8 @@ main.content .main {
 
 .main .main-content #games {
   display: grid;
-  grid-template-columns: repeat(6, 280px);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 1rem;
-}
-
-.main .main-content #games .card {
-  width: 280px;
 }
 
 .main .main-content #games .card .card-content span {
