@@ -255,7 +255,7 @@ main.content .main {
 .main .main-content #dashboard-game {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
   grid-gap: 1rem;
 }
 
@@ -264,19 +264,14 @@ main.content .main {
   grid-row: 1;
 }
 
-.main .main-content #dashboard-game #chart {
-  grid-column: 1;
-  grid-row: 2 / span 3;
-}
-
 .main .main-content #dashboard-game #atividades {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
 }
 
 .main .main-content #dashboard-game #pontuacao {
-  grid-column: 2;
-  grid-row: 3;
+  grid-column: 1;
+  grid-row: 2;
 }
 
 .main .main-content #dashboard-game #atividades #list-atividades {
@@ -317,7 +312,6 @@ main.content .main {
     grid-template-columns: 1fr;
   }
 
-  .main .main-content #dashboard-game #chart,
   .main .main-content #dashboard-game #rank {
     grid-row: unset;
   }
