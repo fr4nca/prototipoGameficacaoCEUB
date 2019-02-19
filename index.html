@@ -15,18 +15,23 @@
   </head>
   <body>
     <nav id="nav">
-      <div id="nav-content">
-        <span id="toggler" onclick="toggleNav()"
-          ><i class="fas fa-bars color-white"></i
-        ></span>
-        <a href="/">
-          GamificaçãoCEUB
-        </a>
-      </div>
+      <ul id="nav-content">
+        <li>
+          <span id="toggler" onclick="toggleNav()"
+            ><i class="fas fa-bars color-white"></i
+          ></span>
+          <a href="/">
+            GamificaçãoCEUB
+          </a>
+        </li>
+        <li id="sign-out">
+          <a href="#!"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      </ul>
     </nav>
-    <main id="content">
-      <nav id="side-nav">
-        <ul id="menu">
+    <main class="content">
+      <nav class="side-nav">
+        <ul class="menu">
           <li class="menu-item active">
             <a href="/"
               ><i class="fas fa-boxes"></i
@@ -34,102 +39,65 @@
             >
           </li>
           <li class="menu-item">
-            <a href="/games.html"
+            <a href="#!"
               ><i class="fas fa-gamepad"></i
-              ><span class="menu-item-text hidden">Games</span></a
+              ><span class="menu-item-text hidden">Game</span></a
             >
           </li>
           <li class="menu-item">
-            <a href="/desafios.html"
-              ><i class="fas fa-bomb"></i
-              ><span class="menu-item-text hidden">Desafios</span></a
-            >
-          </li>
-          <li class="menu-item">
-            <a href="/tarefas.html"
-              ><i class="fas fa-rocket"></i
-              ><span class="menu-item-text hidden">Tarefas</span></a
+            <a href="#!"
+              ><i class="fas fa-user-alt"></i
+              ><span class="menu-item-text hidden">Perfil</span></a
             >
           </li>
         </ul>
       </nav>
-      <section id="dashboard">
-        <h1 id="title" class="l-heading">
-          <i class="fas fa-boxes"></i> Dashboard
-        </h1>
-        <div id="main-content">
-          <div id="game-select">
-            <div class="card">
-              <div class="card-header">Selecione o game:</div>
-              <div class="card-content">
-                <form class="form-group">
-                  <select
-                    class="form-control"
-                    name="game-select"
-                    id="game-select"
-                  >
-                    <option value="">Selecione o game</option>
-                    <option value="game1">Game1</option>
-                    <option value="game2">Game2</option>
-                    <option value="game3">Game3</option>
-                  </select>
-                  <button type="submit" class="btn">Consultar</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div id="ranking">
-            <div class="card">
-              <div class="card-header">Ranking do game:</div>
-              <div class="card-content">
-                <div class="table-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Rank</th>
-                        <th>Jogador</th>
-                        <th>Pontos</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="rank">1</td>
-                        <td class="jogador">Thaymãe</td>
-                        <td class="points">1460</td>
-                      </tr>
-                      <tr>
-                        <td class="rank">2</td>
-                        <td class="jogador">Ronan</td>
-                        <td class="points">1340</td>
-                      </tr>
-                      <tr>
-                        <td class="rank">3</td>
-                        <td class="jogador">Victor França</td>
-                        <td class="points">1245</td>
-                      </tr>
-                      <tr>
-                        <td class="rank">4</td>
-                        <td class="jogador">João Paulo</td>
-                        <td class="points">1210</td>
-                      </tr>
-                      <tr>
-                        <td class="rank">5</td>
-                        <td class="jogador">Lucas Freitas</td>
-                        <td class="points">1186</td>
-                      </tr>
-                    </tbody>
-                  </table>
+      <section class="main">
+        <h1 class="title l-heading"><i class="fas fa-boxes"></i> Dashboard</h1>
+        <div class="main-content">
+          <div id="dashboard">
+            <ul id="games-list">
+              <li class="game-item">
+                <div class="card">
+                  <div class="card-content">
+                    Probabilidade e Estatística
+                    <a href="/game.html">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div id="chart">
-            <div class="card">
-              <div class="card-header">Ranking do game:</div>
-              <div class="card-content">
-                <canvas id="myChart"></canvas>
-              </div>
-            </div>
+              </li>
+              <li class="game-item">
+                <div class="card">
+                  <div class="card-content">
+                    Projeto de Jogos
+                    <a href="/game.html">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="game-item">
+                <div class="card">
+                  <div class="card-content">
+                    Arquitetura de Sistemas Distribuídos
+                    <a href="/game.html">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="game-item">
+                <div class="card">
+                  <div class="card-content">
+                    Sistemas em Tempo Real e Embarcados
+                    <a href="/game.html">
+                      <i class="fas fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>GameficaçãoCEUB | Dashboard</title>
+  </head>
+  <body>
+    <nav id="nav">
+      <ul id="nav-content">
+        <li>
+          <span id="toggler" onclick="toggleNav()"
+            ><i class="fas fa-bars color-white"></i
+          ></span>
+          <a href="/">
+            GamificaçãoCEUB
+          </a>
+        </li>
+        <li id="sign-out">
+          <a href="#!"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <main class="content">
+      <nav class="side-nav">
+        <ul class="menu">
+          <li class="menu-item active">
+            <a href="/"
+              ><i class="fas fa-boxes"></i
+              ><span class="menu-item-text hidden">Dashboard</span></a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="#!"
+              ><i class="fas fa-gamepad"></i
+              ><span class="menu-item-text hidden">Game</span></a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="#!"
+              ><i class="fas fa-user-alt"></i
+              ><span class="menu-item-text hidden">Perfil</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="main">
+        <h1 class="title l-heading"><i class="fas fa-boxes"></i> Dashboard</h1>
+        <div class="main-content">
+          <div id="dashboard-game">
+            <div id="ranking">
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Jogador</th>
+                      <th>Pontos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="rank">1</td>
+                      <td class="jogador">Thaymãe</td>
+                      <td class="points">1460</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">2</td>
+                      <td class="jogador">Ronan</td>
+                      <td class="points">1340</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">3</td>
+                      <td class="jogador">Victor França</td>
+                      <td class="points">1245</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">4</td>
+                      <td class="jogador">João Paulo</td>
+                      <td class="points">1210</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">5</td>
+                      <td class="jogador">Lucas Freitas</td>
+                      <td class="points">1186</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="atividades">
+              <div class="card">
+                <div class="card-header">Atividades completas: 12</div>
+                <div class="card-content">
+                  <ul id="list-atividades">
+                    <li class="atividade-item">
+                      Atividade 1 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 2 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 3 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 4 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 5 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 6 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 7 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 8 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 9 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 10 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 11 <span>12pts</span>
+                    </li>
+                    <li class="atividade-item">
+                      Atividade 12 <span>12pts</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="chart">
+              <div class="card">
+                <div class="card-content">
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div id="pontuacao">
+              <div class="card">
+                <div class="card-content">
+                  <h3>Sua pontuação é: 1000pts</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,9 +1,8 @@
-const sideNav = document.querySelector("#side-nav");
+const sideNav = document.querySelector(".side-nav");
 const toggler = document.querySelector("#toggler");
 const texts = document.querySelectorAll(".menu-item-text");
-const createGame = document.querySelector("#createGame-form");
-const createDesafio = document.querySelector("#desafio-form");
-const createTarefa = document.querySelector("#tarefa-form");
+
+const mainContent = document.querySelector("main.content");
 
 function toggleNav() {
   sideNav.classList.toggle("active");
@@ -11,18 +10,7 @@ function toggleNav() {
   texts.forEach(text => {
     text.classList.toggle("hidden");
   });
-}
-
-function toggleGame() {
-  createGame.classList.toggle("active");
-}
-
-function toggleDesafio() {
-  createDesafio.classList.toggle("active");
-}
-
-function toggleTarefa() {
-  createTarefa.classList.toggle("active");
+  mainContent.classList.toggle("active");
 }
 
 const ctx = document.querySelector("#myChart").getContext("2d");

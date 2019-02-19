@@ -9,22 +9,14 @@
 }
 
 /* Utilities */
-.color-white {
-  color: #fff;
-}
 
-.color-dark {
-  color: #333;
-}
-
-.container {
-  max-width: 1500px;
-  margin: auto;
+.bg-dark {
+  background-color: #31373c;
+  color: white;
 }
 
 .l-heading {
   font-size: 3rem;
-  margin-bottom: 1rem;
   font-weight: 1;
 }
 
@@ -78,12 +70,6 @@ a.btn {
   padding: 0.4rem;
 }
 
-.heading-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 select.form-control {
   padding: 0.5rem;
   font-size: 1rem;
@@ -125,16 +111,28 @@ tbody tr:hover {
 }
 
 #nav #nav-content {
+  list-style: none;
   display: flex;
   height: 3rem;
   width: 100%;
   align-items: center;
   color: white;
+  justify-content: space-between;
 }
 
 #nav #nav-content a {
   text-decoration: none;
   color: white;
+}
+
+#nav #nav-content #sign-out {
+  margin: 0 1rem;
+  padding: 0.6rem;
+}
+
+#nav #nav-content #sign-out:hover {
+  background-color: #0d60a5;
+  border-radius: 50%;
 }
 
 #nav #nav-content #toggler {
@@ -155,13 +153,13 @@ tbody tr:hover {
   background-color: #04569b;
 }
 
-main#content {
+main.content {
   display: grid;
-  grid-template-areas: "side-nav dashboard";
+  grid-template-areas: "side-nav main";
   grid-template-columns: 50px 1fr;
 }
 
-main#content #side-nav {
+main.content .side-nav {
   grid-area: side-nav;
   width: 50px;
   background-color: #31373c;
@@ -170,19 +168,23 @@ main#content #side-nav {
   transition: width 200ms ease;
 }
 
-main#content #side-nav.active {
+main.content.active {
+  grid-template-columns: 130px 1fr;
+}
+
+main.content .side-nav.active {
   width: 130px;
 }
 
-main#content #side-nav #menu .menu-item-text.hidden {
+main.content .side-nav .menu .menu-item-text.hidden {
   display: none;
 }
 
-main#content #side-nav #menu {
+main.content .side-nav .menu {
   list-style: none;
 }
 
-main#content #side-nav #menu .menu-item {
+main.content .side-nav .menu .menu-item {
   font-size: 0.9rem;
   width: 100%;
   height: 2.8rem;
@@ -190,15 +192,15 @@ main#content #side-nav #menu .menu-item {
   margin: auto;
 }
 
-main#content #side-nav #menu .menu-item.active {
+main.content .side-nav .menu .menu-item.active {
   background-color: #22262a;
 }
 
-main#content #side-nav #menu .menu-item:hover {
+main.content .side-nav .menu .menu-item:hover {
   background-color: #282d31;
 }
 
-main#content #side-nav #menu .menu-item a {
+main.content .side-nav .menu .menu-item a {
   text-decoration: none;
   color: white;
   display: flex;
@@ -207,120 +209,103 @@ main#content #side-nav #menu .menu-item a {
   padding: 1rem;
 }
 
-main#content #side-nav #menu .menu-item a i {
+main.content .side-nav .menu .menu-item a i {
   margin-right: 0.5rem;
 }
 
 /* Main */
-main#content section#dashboard {
-  grid-area: dashboard;
+main.content .main {
+  grid-area: main;
+}
+
+.main .title {
   padding: 1.2rem;
 }
 
-section#dashboard #title i {
+.main .title i {
   background: #0572ce;
   padding: 0.8rem;
   border-radius: 5px;
   color: #fff;
 }
 
-section#dashboard #main-content {
+.main .main-content {
+  padding: 1.2rem;
+}
+
+.main .main-content #dashboard #games-list {
+  list-style: none;
+}
+
+.main .main-content #dashboard #games-list .game-item {
+  margin-bottom: 0.8rem;
+}
+
+.main .main-content #dashboard #games-list .game-item .card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main .main-content #dashboard #games-list .game-item .card-content a {
+  text-decoration: none;
+  color: #31373c;
+}
+
+.main .main-content #dashboard-game {
   display: grid;
-  grid-template-areas:
-    "game-select game-select"
-    "ranking chart";
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
   grid-gap: 1rem;
 }
 
-section#dashboard #main-content #game-select {
-  grid-area: game-select;
+.main .main-content #dashboard-game #ranking {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-section#dashboard #main-content #ranking {
-  grid-area: ranking;
+.main .main-content #dashboard-game #chart {
+  grid-column: 1;
+  grid-row: 2 / span 3;
 }
 
-section#dashboard #main-content #chart {
-  grid-area: chart;
+.main .main-content #dashboard-game #atividades {
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
-section#dashboard #main-content #chart #myChart {
+.main .main-content #dashboard-game #pontuacao {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.main .main-content #dashboard-game #atividades #list-atividades {
+  list-style: none;
+}
+
+.main
+  .main-content
+  #dashboard-game
+  #atividades
+  #list-atividades
+  :not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.main
+  .main-content
+  #dashboard-game
+  #atividades
+  #list-atividades
+  .atividade-item {
+  padding: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .main-content #dashboard-game #chart #myChart {
   width: 100%;
-}
-
-section#dashboard #game-content {
-  display: grid;
-  grid-template-areas:
-    "gameform"
-    "gametable";
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-}
-
-section#dashboard #game-content #games {
-  grid-area: gametable;
-}
-
-section#dashboard #game-content #createGame-form {
-  grid-area: gameform;
-  display: none;
-}
-
-section#dashboard #game-content #createGame-form.active {
-  grid-area: gameform;
-  display: block;
-}
-
-section#dashboard #desafio-content {
-  display: grid;
-  grid-template-areas:
-    "desafioform"
-    "desafiogameselect"
-    "desafiostable";
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-}
-
-section#dashboard #desafio-content #desafio-game-select {
-  grid-area: desafiogameselect;
-}
-
-section#dashboard #desafio-content #desafios {
-  grid-area: desafiostable;
-}
-
-section#dashboard #desafio-content #desafio-form {
-  grid-area: desafioform;
-  display: none;
-}
-
-section#dashboard #desafio-content #desafio-form.active {
-  grid-area: desafioform;
-  display: block;
-}
-
-section#dashboard #tarefa-content {
-  display: grid;
-  grid-template-areas:
-    "tarefaform"
-    "tarefastable";
-  grid-template-columns: 1fr;
-  grid-gap: 1rem;
-}
-
-section#dashboard #tarefa-content #tarefas {
-  grid-area: tarefastable;
-}
-
-section#dashboard #tarefa-content #tarefa-form {
-  grid-area: tarefaform;
-  display: none;
-}
-
-section#dashboard #tarefa-content #tarefa-form.active {
-  grid-area: tarefaform;
-  display: block;
+  height: 300px !important;
 }
 
 @media (max-width: 768px) {
@@ -328,22 +313,18 @@ section#dashboard #tarefa-content #tarefa-form.active {
     font-size: 2rem;
   }
 
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  section#dashboard #main-content #chart #myChart {
-    width: 100%;
-    height: 275px !important;
-  }
-
-  section#dashboard #main-content {
-    grid-template-areas:
-      "game-select"
-      "ranking"
-      "chart";
+  .main .main-content #dashboard-game {
     grid-template-columns: 1fr;
+  }
+
+  .main .main-content #dashboard-game #chart,
+  .main .main-content #dashboard-game #rank {
+    grid-row: unset;
+  }
+
+  .main .main-content #dashboard-game #atividades,
+  .main .main-content #dashboard-game #pontuacao {
+    grid-column: 1;
+    grid-row: unset;
   }
 }
