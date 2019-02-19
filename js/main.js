@@ -1,7 +1,7 @@
 const sideNav = document.querySelector("#side-nav");
 const toggler = document.querySelector("#toggler");
 const texts = document.querySelectorAll(".menu-item-text");
-const main = document.querySelector("main");
+const createGame = document.querySelector("#createGame-form");
 
 function toggleNav() {
   sideNav.classList.toggle("active");
@@ -9,7 +9,10 @@ function toggleNav() {
   texts.forEach(text => {
     text.classList.toggle("hidden");
   });
-  main.classList.toggle("active");
+}
+
+function toggleGame() {
+  createGame.classList.toggle("active");
 }
 
 const ctx = document.querySelector("#myChart").getContext("2d");

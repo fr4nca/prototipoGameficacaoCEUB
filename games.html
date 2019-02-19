@@ -14,18 +14,18 @@
     <title>GameficaçãoCEUB | Dashboard</title>
   </head>
   <body>
-    <header id="nav">
-      <nav id="top-nav">
+    <nav id="nav">
+      <div id="nav-content">
         <span id="toggler" onclick="toggleNav()"
           ><i class="fas fa-bars color-white"></i
         ></span>
         <a href="/">
           GamificaçãoCEUB
         </a>
-      </nav>
-    </header>
-    <div id="content">
-      <aside id="side-nav">
+      </div>
+    </nav>
+    <main id="content">
+      <nav id="side-nav">
         <ul id="menu">
           <li class="menu-item ">
             <a href="/"
@@ -52,14 +52,96 @@
             >
           </li>
         </ul>
-      </aside>
-      <main id="dashboard" class="container">
-        <h1 id="title" class="l-heading">
-          <i class="fas fa-gamepad"></i> Games
-        </h1>
-        <section id="main-content"></section>
-      </main>
-    </div>
+      </nav>
+      <section id="dashboard">
+        <div class="heading-wrapper">
+          <h1 id="title" class="l-heading">
+            <i class="fas fa-gamepad"></i> Games
+          </h1>
+          <a id="createGame" onclick="toggleGame()" class="btn">Criar game</a>
+        </div>
+        <div id="game-content">
+          <div id="createGame-form">
+            <div class="card">
+              <div class="card-header">Criar game</div>
+              <div class="card-content">
+                <form>
+                  <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input
+                      type="text"
+                      name="nome"
+                      id="nome"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="dta_inicio">Data de início:</label>
+                    <input
+                      type="date"
+                      name="dta_inicio"
+                      id="dta_inicio"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="dta_fim">Data fim:</label>
+                    <input
+                      type="date"
+                      name="dta_fim"
+                      id="dta_fim"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="responsavel">Responsável:</label>
+                    <input
+                      type="text"
+                      name="responsavel"
+                      id="responsavel"
+                      class="form-control"
+                    />
+                  </div>
+                  <a class="btn">Criar</a>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div id="games">
+            <div class="card">
+              <div class="card-header">Games</div>
+              <div class="card-content">
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Data início</th>
+                        <th>Data fim</th>
+                        <th>Responsável</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="id">1</td>
+                        <td class="nome">Turma A</td>
+                        <td class="dta_inicio">18/02/2019</td>
+                        <td class="dta_fim">22/04/2019</td>
+                        <td class="responsavel">Thaynara</td>
+                        <td class="status">Ativo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="js/main.js"></script>
   </body>
 </html>

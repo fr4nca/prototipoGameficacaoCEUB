@@ -55,14 +55,27 @@
   font-size: 0.85rem;
 }
 
+a.btn {
+  text-decoration: none;
+}
+
 .btn:hover {
-  background-color: #0d60a5;
+  background-color: #1e3649;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #333;
 }
 
 .form-control {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px #ccc solid;
+  padding: 0.4rem;
 }
 
 select.form-control {
@@ -228,6 +241,35 @@ section#dashboard #main-content #chart {
 
 section#dashboard #main-content #chart #myChart {
   width: 100%;
+}
+
+section#dashboard #game-content {
+  display: grid;
+  grid-template-areas:
+    "gameform"
+    "gametable";
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+section#dashboard .heading-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section#dashboard #game-content #games {
+  grid-area: gametable;
+}
+
+section#dashboard #game-content #createGame-form {
+  grid-area: gameform;
+  display: none;
+}
+
+section#dashboard #game-content #createGame-form.active {
+  grid-area: gameform;
+  display: block;
 }
 
 @media (max-width: 768px) {
