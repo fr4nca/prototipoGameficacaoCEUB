@@ -11,22 +11,27 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>GameficaçãoCEUB | Dashboard</title>
+    <title>GameficaçãoCEUB | Games</title>
   </head>
   <body>
     <nav id="nav">
-      <div id="nav-content">
-        <span id="toggler" onclick="toggleNav()"
-          ><i class="fas fa-bars color-white"></i
-        ></span>
-        <a href="/">
-          GamificaçãoCEUB
-        </a>
-      </div>
+      <ul id="nav-content">
+        <li>
+          <span id="toggler" onclick="toggleNav()"
+            ><i class="fas fa-bars color-white"></i
+          ></span>
+          <a href="/">
+            GamificaçãoCEUB
+          </a>
+        </li>
+        <li id="sign-out">
+          <a href="#!"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      </ul>
     </nav>
-    <main id="content">
-      <nav id="side-nav">
-        <ul id="menu">
+    <main class="content">
+      <nav class="side-nav">
+        <ul class="menu">
           <li class="menu-item ">
             <a href="/"
               ><i class="fas fa-boxes"></i
@@ -36,105 +41,57 @@
           <li class="menu-item active">
             <a href="/games.html"
               ><i class="fas fa-gamepad"></i
-              ><span class="menu-item-text hidden">Games</span></a
+              ><span class="menu-item-text hidden">Game</span></a
             >
           </li>
           <li class="menu-item">
-            <a href="/desafios.html"
-              ><i class="fas fa-bomb"></i
-              ><span class="menu-item-text hidden">Desafios</span></a
-            >
-          </li>
-          <li class="menu-item">
-            <a href="/tarefas.html"
-              ><i class="fas fa-rocket"></i
-              ><span class="menu-item-text hidden">Tarefas</span></a
+            <a href="#!"
+              ><i class="fas fa-user-alt"></i
+              ><span class="menu-item-text hidden">Perfil</span></a
             >
           </li>
         </ul>
       </nav>
-      <section id="dashboard">
-        <div class="heading-wrapper">
-          <h1 id="title" class="l-heading">
-            <i class="fas fa-gamepad"></i> Games
-          </h1>
-          <a id="createGame" onclick="toggleGame()" class="btn">Criar game</a>
-        </div>
-        <div id="game-content">
-          <div id="createGame-form">
-            <div class="card">
-              <div class="card-header">Criar game</div>
-              <div class="card-content">
-                <form>
-                  <div class="form-group">
-                    <label for="nome">Nome:</label>
-                    <input
-                      type="text"
-                      name="nome"
-                      id="nome"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="dta_inicio">Data de início:</label>
-                    <input
-                      type="date"
-                      name="dta_inicio"
-                      id="dta_inicio"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="dta_fim">Data fim:</label>
-                    <input
-                      type="date"
-                      name="dta_fim"
-                      id="dta_fim"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <label for="responsavel">Responsável:</label>
-                    <input
-                      type="text"
-                      name="responsavel"
-                      id="responsavel"
-                      class="form-control"
-                    />
-                  </div>
-                  <a class="btn">Criar</a>
-                </form>
-              </div>
-            </div>
-          </div>
+      <section class="main">
+        <h1 class="title l-heading"><i class="fas fa-gamepad"></i> Games</h1>
+        <div class="main-content">
           <div id="games">
             <div class="card">
-              <div class="card-header">Games</div>
+              <div class="card-header">Sistemas em Tempo Real e Embarcados</div>
               <div class="card-content">
-                <div class="table-wrapper">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>Data início</th>
-                        <th>Data fim</th>
-                        <th>Responsável</th>
-                        <th>Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="id">1</td>
-                        <td class="nome">Turma A</td>
-                        <td class="dta_inicio">18/02/2019</td>
-                        <td class="dta_fim">22/04/2019</td>
-                        <td class="responsavel">Thaynara</td>
-                        <td class="status">Ativo</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+                <span>Responsável: Victor França</span>
+                <span>Data de início: 22/02/2019</span>
+                <span>Data fim: 22/06/2019</span>
+                <a href="/gameId.html" class="btn">Detalhes</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Probabilidade e Estatística</div>
+              <div class="card-content">
+                <span>Responsável: Victor França</span>
+                <span>Data de início: 22/02/2019</span>
+                <span>Data fim: 22/06/2019</span>
+                <a href="/gameId.html" class="btn">Detalhes</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Projeto de Jogos</div>
+              <div class="card-content">
+                <span>Responsável: Victor França</span>
+                <span>Data de início: 22/02/2019</span>
+                <span>Data fim: 22/06/2019</span>
+                <a href="/gameId.html" class="btn">Detalhes</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                Arquitetura de Sistemas Distribuídos
+              </div>
+              <div class="card-content">
+                <span>Responsável: Victor França</span>
+                <span>Data de início: 22/02/2019</span>
+                <span>Data fim: 22/06/2019</span>
+                <a href="/gameId.html" class="btn">Detalhes</a>
               </div>
             </div>
           </div>

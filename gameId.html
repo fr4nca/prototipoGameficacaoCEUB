@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>GameficaçãoCEUB | Games</title>
+  </head>
+  <body>
+    <nav id="nav">
+      <ul id="nav-content">
+        <li>
+          <span id="toggler" onclick="toggleNav()"
+            ><i class="fas fa-bars color-white"></i
+          ></span>
+          <a href="/">
+            GamificaçãoCEUB
+          </a>
+        </li>
+        <li id="sign-out">
+          <a href="#!"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <main class="content">
+      <nav class="side-nav">
+        <ul class="menu">
+          <li class="menu-item ">
+            <a href="/"
+              ><i class="fas fa-boxes"></i
+              ><span class="menu-item-text hidden">Dashboard</span></a
+            >
+          </li>
+          <li class="menu-item active">
+            <a href="/games.html"
+              ><i class="fas fa-gamepad"></i
+              ><span class="menu-item-text hidden">Game</span></a
+            >
+          </li>
+          <li class="menu-item">
+            <a href="#!"
+              ><i class="fas fa-user-alt"></i
+              ><span class="menu-item-text hidden">Perfil</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section class="main">
+        <h1 class="title l-heading">
+          <i class="fas fa-gamepad"></i> Probabilidade e Estatística
+        </h1>
+        <div class="main-content"></div>
+      </section>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

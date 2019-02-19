@@ -39,7 +39,7 @@
             >
           </li>
           <li class="menu-item">
-            <a href="#!"
+            <a href="/games.html"
               ><i class="fas fa-gamepad"></i
               ><span class="menu-item-text hidden">Game</span></a
             >
@@ -57,47 +57,43 @@
         <div class="main-content">
           <div id="dashboard-game">
             <div id="ranking">
-              <div class="card">
-                <div class="card-content">
-                  <div class="table-wrapper">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Rank</th>
-                          <th>Jogador</th>
-                          <th>Pontos</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="rank">1</td>
-                          <td class="jogador">Thaymãe</td>
-                          <td class="points">1460</td>
-                        </tr>
-                        <tr>
-                          <td class="rank">2</td>
-                          <td class="jogador">Ronan</td>
-                          <td class="points">1340</td>
-                        </tr>
-                        <tr>
-                          <td class="rank">3</td>
-                          <td class="jogador">Victor França</td>
-                          <td class="points">1245</td>
-                        </tr>
-                        <tr>
-                          <td class="rank">4</td>
-                          <td class="jogador">João Paulo</td>
-                          <td class="points">1210</td>
-                        </tr>
-                        <tr>
-                          <td class="rank">5</td>
-                          <td class="jogador">Lucas Freitas</td>
-                          <td class="points">1186</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Rank</th>
+                      <th>Jogador</th>
+                      <th>Pontos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="rank">1</td>
+                      <td class="jogador">Thaymãe</td>
+                      <td class="points">1460</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">2</td>
+                      <td class="jogador">Ronan</td>
+                      <td class="points">1340</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">3</td>
+                      <td class="jogador">Victor França</td>
+                      <td class="points">1245</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">4</td>
+                      <td class="jogador">João Paulo</td>
+                      <td class="points">1210</td>
+                    </tr>
+                    <tr>
+                      <td class="rank">5</td>
+                      <td class="jogador">Lucas Freitas</td>
+                      <td class="points">1186</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <div id="atividades">
@@ -145,8 +141,15 @@
                 </div>
               </div>
             </div>
+            <div id="chart">
+              <div class="card">
+                <div class="card-content">
+                  <canvas id="myChart"></canvas>
+                </div>
+              </div>
+            </div>
             <div id="pontuacao">
-              <div class="card" style="height: 100%;">
+              <div class="card">
                 <div class="card-content">
                   <h3>Sua pontuação é: 1000pts</h3>
                 </div>
@@ -156,6 +159,7 @@
         </div>
       </section>
     </main>
+
     <script src="js/main.js"></script>
   </body>
 </html>
